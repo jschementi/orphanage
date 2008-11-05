@@ -1,0 +1,17 @@
+imageshow - little 4-image WPF image renderer
+by Jimmy Schementi
+
+Ruby Usage:
+
+  uris = %W(
+    http://www.palagems.com/Images/ruby_thai_1pt21cts.jpg
+  )
+  require 'imageshow'
+  show_photos(uris)
+
+Command Line Usage:
+
+  > ir runner.rb http://www.palagems.com/Images/ruby_thai_1pt21cts.jpg
+
+Both ways can accept either 1, 2, or 4 URIs. 
+

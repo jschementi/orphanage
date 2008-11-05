@@ -1,0 +1,95 @@
+require 'mscorlib'
+require 'System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+require 'PresentationFramework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+require 'PresentationCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+require 'WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'
+
+include System
+include System::Windows
+include System::Windows::Controls
+include System::Windows::Media
+include System::Windows::Media::Imaging
+ 
+def show_photos(urls)
+  ImageShow.new(urls)
+end
+
+class ImageShow
+  def initialize(urls)
+    if urls.empty? || urls.size > 4 || urls.size == 3 
+      puts "Must have 1, 2 or 4 urls"
+    else
+      @urls = urls
+      render_images
+    end
+  end
+
+  def render_images
+    puts "Rendering images: #{@urls.inspect}" 
+ 
+    w = Window.new
+    w.size_to_content = SizeToContent.width_and_height
+    w.background = black
+    w.window_style = WindowStyle.tool_window
+    w.resize_mode = ResizeMode.no_resize
+    w.title = "IronRuby Image Shower"
+    
+    grid = Grid.new
+    grid.background = gray
+
+    add_stack_panel(grid, :vertical, Thickness.new(20)) do |sp|
+      add_stack_panel(sp, :horizontal) do |sph|
+        add_stack_panel(sph, :vertical, Thickness.new(20, 20, 10, 10)) do |spv|
+          add_image(@urls[0], spv)
+        end
+        if @urls.size > 1
+          add_stack_panel(sph, :vertical, Thickness.new(10, 20, 20, 10)) do |spv|
+            add_image(@urls[1], spv)
+          end
+        end
+      end
+      if @urls.size == 4
+        add_stack_panel(sp, :horizontal) do |sph|
+          add_stack_panel(sph, :vertical, Thickness.new(20, 10, 10, 20)) do |spv|
+            add_image(@urls[2], spv)
+          end
+          add_stack_panel(sph, :vertical, Thickness.new(10, 10, 20, 20)) do |spv|
+            add_image(@urls[3], spv)
+          end
+        end
+      end
+    end
+
+    w.content = grid
+    a = Application.new
+    a.run w
+  end
+
+  def black
+    SolidColorBrush.new(Colors.black)
+  end
+  
+  def gray
+    SolidColorBrush.new(Colors.gray)
+  end
+
+  def add_image(url, parent)
+    image = Image.new
+    bimage = BitmapImage.new
+    bimage.begin_init
+    bimage.uri_source = Uri.new(url)
+    bimage.end_init
+    image.width = 200
+    image.source = bimage
+    parent.children.add(image)
+  end
+
+  def add_stack_panel(parent, orientation = :vertical, thickness = Thickness.new(0), background = black)
+    sph = StackPanel.new
+    sph.orientation = Orientation.send(orientation)
+    sph.margin = thickness
+    sph.background = background
+    yield sph
+    parent.children.add sph
+  end
+end
