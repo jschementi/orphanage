@@ -1,0 +1,37 @@
+tester - small Ruby spec/mock library
+by Jimmy Schementi
+
+Example:
+
+$LOAD_PATH << 'path/to/orphanage/tester'
+require 'tester'
+
+class ToTest
+  def truth
+    42
+  end
+  def network
+    Network.open('http://localhost:1234')
+  end
+end
+class Network; end
+
+describe ToTest do
+  before(:each) do 
+    @t = ToTest.new
+    @n = mock("Network")
+  end
+  it 'should return 42' do
+    @t.truth.should == 42
+  end
+  it 'should open a network connection' do
+    Network.should_receive(:open).with('http://localhost:1234').and_return true
+    @t.network.should == true
+  end
+end
+
+> rbr demo\example.rb
+...
+3 passed, 0 failed
+
+See demo for more test examples
