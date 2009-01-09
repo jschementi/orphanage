@@ -1,0 +1,9 @@
+== Branching
+
+Track a single remote branch as a local branch
+
+git checkout --track -b #{branch_name} origin/${branch_name}
+
+Pushing all local branches to remote, creating new remote branches as needed
+
+git push --all origin
