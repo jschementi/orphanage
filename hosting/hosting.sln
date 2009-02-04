@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf", "wpf\wpf.csproj", "{456F31ED-03B3-4AA1-A51A-14885DF21C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet", "aspnet\aspnet.csproj", "{19DFA3C2-DCA0-437B-BCA0-CBEA34BAF4C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{456F31ED-03B3-4AA1-A51A-14885DF21C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456F31ED-03B3-4AA1-A51A-14885DF21C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456F31ED-03B3-4AA1-A51A-14885DF21C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456F31ED-03B3-4AA1-A51A-14885DF21C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19DFA3C2-DCA0-437B-BCA0-CBEA34BAF4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19DFA3C2-DCA0-437B-BCA0-CBEA34BAF4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19DFA3C2-DCA0-437B-BCA0-CBEA34BAF4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19DFA3C2-DCA0-437B-BCA0-CBEA34BAF4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
