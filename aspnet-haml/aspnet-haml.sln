@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HamlHttpHandler", "HamlHttpHandler\HamlHttpHandler.csproj", "{74F21A18-86D5-486F-8F27-AA8D5E0184F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HamlExample", "HamlExample\HamlExample.csproj", "{45B04B9E-F7F2-4CA3-907D-AA4E175511D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74F21A18-86D5-486F-8F27-AA8D5E0184F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F21A18-86D5-486F-8F27-AA8D5E0184F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F21A18-86D5-486F-8F27-AA8D5E0184F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F21A18-86D5-486F-8F27-AA8D5E0184F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B04B9E-F7F2-4CA3-907D-AA4E175511D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B04B9E-F7F2-4CA3-907D-AA4E175511D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B04B9E-F7F2-4CA3-907D-AA4E175511D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B04B9E-F7F2-4CA3-907D-AA4E175511D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

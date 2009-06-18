@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P
+  body: 'Haml overrides various ActionView helpers, which call an #is_haml? method
+    to determine whether or not the current context object is a proper Haml context.
+    Because ActionView helpers may be included in non-ActionView::Base classes, it''s
+    a good idea to define is_haml? for all objects.'
+full_name: Object#is_haml?
+is_singleton: false
+name: is_haml?
+params: ()
+visibility: public
