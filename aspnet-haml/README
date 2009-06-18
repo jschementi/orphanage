@@ -1,0 +1,9 @@
+Using Haml and Sass as templating engines in IIS
+================================================
+
+1. Make sure you have IIS7 installed
+2. Open aspnet-haml.sln in Visual Studio
+   - VS will prompt you to create a Virtual Directory; 
+     you must do so for the HamlExample project to load
+3. Select HamlExample as your start project
+4. Hit F5 and you'll be running Haml and Sass in IIS.
