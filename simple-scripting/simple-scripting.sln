@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "simple-scripting", "simple-scripting\simple-scripting.csproj", "{37180608-66B1-4AF7-98B2-3322E4D9A84C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37180608-66B1-4AF7-98B2-3322E4D9A84C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37180608-66B1-4AF7-98B2-3322E4D9A84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37180608-66B1-4AF7-98B2-3322E4D9A84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37180608-66B1-4AF7-98B2-3322E4D9A84C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
