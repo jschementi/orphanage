@@ -31,7 +31,7 @@ namespace EmbeddingIronPython {
         private void Application_Startup(object sender, StartupEventArgs e) {
             this.RootVisual = new MainPage();
 
-            var runtime = new Hosting.ScriptRuntime(Silverlight.DynamicEngine.CreateRuntimeSetup());
+            var runtime = Silverlight.DynamicEngine.CreateRuntime();
             _python = runtime.GetEngine("python");
 
             _scope = _python.CreateScope();
