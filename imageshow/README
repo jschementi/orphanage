@@ -7,11 +7,11 @@ Ruby Usage:
     http://www.palagems.com/Images/ruby_thai_1pt21cts.jpg
   )
   require 'imageshow'
-  show_photos(uris)
+  ImageShow.new(uris)
 
 Command Line Usage:
 
-  > ir runner.rb http://www.palagems.com/Images/ruby_thai_1pt21cts.jpg
+  > ir imageshow.rb http://www.palagems.com/Images/ruby_thai_1pt21cts.jpg
 
 Both ways can accept either 1, 2, or 4 URIs. 
 
