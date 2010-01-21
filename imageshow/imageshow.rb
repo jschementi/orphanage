@@ -9,10 +9,6 @@ include System::Windows
 include System::Windows::Controls
 include System::Windows::Media
 include System::Windows::Media::Imaging
- 
-def show_photos(urls)
-  ImageShow.new(urls)
-end
 
 class ImageShow
   def initialize(urls)
@@ -92,4 +88,8 @@ class ImageShow
     yield sph
     parent.children.add sph
   end
+end
+
+if __FILE__ == $0
+  ImageShow.new(ARGV)
 end
